@@ -580,7 +580,8 @@ p {
 .readback-list li {
   padding: 12px 14px;
   border-radius: var(--radius-opt);
-  background: var(--theme-soft);
+  background: color-mix(in srgb, var(--theme-color) 20%, var(--card-bg));
+  border-left: 3px solid var(--theme-color);
   font-size: 14.5px;
   line-height: 1.7;
 }
