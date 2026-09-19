@@ -31,6 +31,10 @@
   --theme-soft: #e6f7ef;
   --theme-ink: #1c6b50;
 
+  /* --theme-soft 是给「配 --theme-ink 文字」用的，淡到浮在白卡上几乎看不见。
+     --theme-chip 是给纯色块用的实色，任何浏览器都认，不依赖 color-mix。 */
+  --theme-chip: #d3ecdf;
+
   --font:
     -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", "Noto Sans SC", "Segoe UI", sans-serif;
@@ -42,24 +46,28 @@
   --theme-color: #2f9e76;
   --theme-soft: #e6f7ef;
   --theme-ink: #1c6b50;
+  --theme-chip: #d3ecdf;
 }
 
 .t-anxious {
   --theme-color: #d8734a;
   --theme-soft: #fdeee7;
   --theme-ink: #95401f;
+  --theme-chip: #f8ded2;
 }
 
 .t-avoidant {
   --theme-color: #4b7bd6;
   --theme-soft: #e8eefc;
   --theme-ink: #2a5095;
+  --theme-chip: #dae5fa;
 }
 
 .t-fearful {
   --theme-color: #8a5ca8;
   --theme-soft: #f3ecf8;
   --theme-ink: #5e3a76;
+  --theme-chip: #e9dcf4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,24 +86,28 @@
     --theme-color: #4cbb92;
     --theme-soft: #16302a;
     --theme-ink: #7fd8b4;
+    --theme-chip: #17352c;
   }
 
   .t-anxious {
     --theme-color: #e08b62;
     --theme-soft: #33221a;
     --theme-ink: #f0ab84;
+    --theme-chip: #3a2820;
   }
 
   .t-avoidant {
     --theme-color: #7ba1e8;
     --theme-soft: #1a2233;
     --theme-ink: #9dbcff;
+    --theme-chip: #22304f;
   }
 
   .t-fearful {
     --theme-color: #b48bd0;
     --theme-soft: #2a2033;
     --theme-ink: #cfa8e6;
+    --theme-chip: #382a45;
   }
 
   .card {
@@ -578,12 +590,13 @@ p {
 }
 
 .readback-list li {
-  padding: 12px 14px;
+  padding: 12px 15px;
   border-radius: var(--radius-opt);
-  background: color-mix(in srgb, var(--theme-color) 20%, var(--card-bg));
+  background: var(--theme-chip);
   border-left: 3px solid var(--theme-color);
-  font-size: 14.5px;
-  line-height: 1.7;
+  color: var(--text-main);
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 /* ── 提示卡 ── */
